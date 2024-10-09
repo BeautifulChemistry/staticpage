@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Employee Data - 2024</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .hidden-row {
+            display: none;
+        }
+        .hidden-day {
+            display: none;
+        }
+    </style>
+    <script>
+        function toggleMonth(monthId) {
+            var rows = document.querySelectorAll('.' + monthId);
+            for (var i = 0; i < rows.length; i++) {
+                rows[i].style.display = (rows[i].style.display === 'none' || rows[i].style.display === '') ? 'table-row' : 'none';
+            }
+        }
+
+        function toggleDay(monthId, dayId) {
+            var dayRows = document.querySelectorAll('.' + monthId + '-' + dayId);
+            for (var i = 0; i < dayRows.length; i++) {
+                dayRows[i].style.display = (dayRows[i].style.display === 'none' || dayRows[i].style.display === '') ? 'table-row' : 'none';
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <table>
+        <thead>
+            <tr>
+                <th onclick="toggleMonth('year-row')" style="cursor: pointer;">Year</th>
+                <th>Today HC</th>
+                <th>Resign Employee</th>
+                <th>Balance HC</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Main Year Row -->
+            <tr id="year-row">
+                <td style="cursor: pointer;">2024</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+
+            </tr>
+            
+            <!-- January -->
+            <tr id="January" onclick="toggleMonth('January')" style="cursor: pointer;">
+                <td>January</td>
+                <td>868</td>
+                <td>0</td>
+                <td>868</td>
+            </tr>
+            <tr class="January hidden-row hidden-day">
+                <td>1</td>
+                <td>868</td>
+                <td>0</td>
+                <td>0</td>
+
+            </tr>
+            <tr class="January hidden-row hidden-day">
+                <td> 2</td>
+                <td>868</td>
+                <td>0</td>
+                <td>0</td>
+
+            </tr>
+            <tr class="January hidden-row hidden-day">
+                <td>3</td>
+                <td>868</td>
+                <td>0</td>
+                <td>0</td>
+            </tr>
+
+            <tr class="January hidden-row hidden-day">
+                <td>4</td>
+                <td>868</td>
+                <td>0</td>
+                <td>0</td>
+            </tr>
+
+            <tr class="January hidden-row hidden-day">
+                <td>5</td>
+                <td>868</td>
+                <td>0</td>
+                <td>0</td>
+            </tr>
+
+            <tr class="January hidden-row hidden-day">
+                <td>6</td>
+                <td>868</td>
+                <td>0</td>
+                <td>0</td>
+            </tr>
+
+            
+            <tr class="January hidden-row hidden-day">
+                <td>7</td>
+                <td>868</td>
+                <td>0</td>
+                <td>0</td>
+            </tr>
+
+
+
+            <!-- February -->
+            <tr id="February" onclick="toggleMonth('February')" style="cursor: pointer;">
+                <td>February</td>
+                <td>860</td>
+                <td>2</td>
+                <td>2</td>
+
+            </tr>
+            <tr class="February hidden-row hidden-day">
+                <td>February 1</td>
+                <td>860</td>
+                <td>2</td>
+                <td>0</td>
+            </tr>
+            <tr class="February hidden-row hidden-day">
+                <td>February 2</td>
+                <td>860</td>
+                <td>1</td>
+                <td>2</td>
+
+            </tr>
+
+
+
+            
+            <!-- March -->
+
+   
+            
+
+            <!-- Add additional months and days in a similar fashion -->
+        </tbody>
+    </table>
+
+</body>
+</html>
